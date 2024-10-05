@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: sprites_0
       value: 
       objectReference: {fileID: 11400000, guid: 19ac7dc799da10944aa37fcd4997531d, type: 2}
+    - target: {fileID: 4050148736268121761, guid: 0e6fda1259158ae4bbf1cb364bf25f20, type: 3}
+      propertyPath: tilePrefab
+      value: 
+      objectReference: {fileID: 5479287447718917987, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
     - target: {fileID: 8763920085891084964, guid: 0e6fda1259158ae4bbf1cb364bf25f20, type: 3}
       propertyPath: m_Name
       value: ScriptRunner
