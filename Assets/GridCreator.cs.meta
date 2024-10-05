@@ -4,7 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - tilePrefab: {fileID: 5479287447718917987, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
+  - tilemap: {fileID: 3231723176045758175, guid: c35491c2f5ea1dd4a87866bc75e7fd19, type: 3}
+  - sprites_0: {fileID: 11400000, guid: 19ac7dc799da10944aa37fcd4997531d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
