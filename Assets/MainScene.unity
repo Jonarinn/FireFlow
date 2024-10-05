@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 468915886}
   - component: {fileID: 468915885}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: 'GameObject '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1463cf61b54064d21990e7aeacd22689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 6890171417896752708, guid: 86ae7de409eb54f619fb1328e4d42480, type: 3}
+  tilePrefab: {fileID: 5479287447718917987, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
   width: 100
   height: 100
   tileSpacing: 1.1
@@ -273,6 +273,18 @@ PrefabInstance:
     - target: {fileID: 5479287447718917987, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
       propertyPath: m_Name
       value: TilePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954391135766544593, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19691172
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954391135766544593, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954391135766544593, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2897326
       objectReference: {fileID: 0}
     - target: {fileID: 8815994235984252301, guid: fd896f5aca58a415e9e9560e4ca17a8e, type: 3}
       propertyPath: m_LocalPosition.x
