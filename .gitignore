@@ -11,3 +11,8 @@
 !/Packages/
 !/ProjectSettings/
 
+.vs/
+*.csproj
+*.sln
+UserSettings/
+.vsconfig
