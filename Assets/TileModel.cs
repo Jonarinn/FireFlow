@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class TileModel : ScriptableObject
 {
+    [HideInInspector] public Vector2Int position;
+
+    public bool canBurn;
+    public float burnTime;
 
     [SerializeField] private TileState state = TileState.Healthy;
-
     public TileState getState() { return this.state; }
     public void SetState(TileState newState) { this.state = newState; }
 
@@ -17,6 +19,13 @@ public class TileModel : ScriptableObject
         else if (state == TileState.Dead) SetState(TileState.Healthy);
     }
 
+
+    [Range(0, 1)][InspectorName("Spread Chance/s")] public float spreadChancePerSecond;
+
+    public bool ShouldSpread(float timeDelta)
+    {
+        return (spreadChancePerSecond * timeDelta) > Random.Range(0f, 1f);
+    }
 
 }
 

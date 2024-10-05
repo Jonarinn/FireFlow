@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 502968187}
   - component: {fileID: 502968186}
   - component: {fileID: 502968188}
+  - component: {fileID: 502968189}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -198,7 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390c2d31acb8fa84c96f35691d62251f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 10, y: 15}
+  size: {x: 150, y: 100}
+  healthyTile: {fileID: 11400000, guid: 34825899836e08f489ee9263ae5698bb, type: 2}
 --- !u!4 &502968187
 Transform:
   m_ObjectHideFlags: 0
@@ -227,6 +229,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 502968186}
+  fireManager: {fileID: 502968189}
+--- !u!114 &502968189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502968185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ab67f1b604a44cbefb630e17750ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 502968188}
+  burningTiles: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 100, y: 55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

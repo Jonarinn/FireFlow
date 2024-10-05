@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameModel : MonoBehaviour
 {
 
     public Vector2Int size;
+    public TileModel healthyTile;
 
     [SerializeField] private TileModel[,] tiles;
     public TileModel[,] GetTiles() { return tiles; }
@@ -14,7 +12,12 @@ public class GameModel : MonoBehaviour
 
     private void OnEnable()
     {
-        tiles = Utils.Create2DArray(size.x, size.y, () => ScriptableObject.CreateInstance<TileModel>());
+        tiles = Utils.Create2DArray(size.x, size.y, (x, y) =>
+        {
+            var tile = Instantiate(healthyTile);
+            tile.position = new(x, y);
+            return tile;
+        });
     }
 
     public TileModel? GetTileAtPosition(Vector2Int position)
@@ -29,5 +32,10 @@ public class GameModel : MonoBehaviour
         var tile = GetTileAtPosition(position);
         if (tile == null) return;
         tile.MoveToNextState();
+    }
+
+    public void SpreadFire(TileModel tile)
+    {
+
     }
 }
