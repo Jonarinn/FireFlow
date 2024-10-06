@@ -35,13 +35,10 @@ public class TileModel : ScriptableObject
         return _generallyBurnable && state != TileState.Dead;
     }
 
-    public void changeTileType(TileType newTileType)
+    public void ChangeTileType(TileType newTileType)
     {
         tileType = newTileType;
-
-
     }
-
 }
 
 public enum TileState
