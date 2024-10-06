@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -360,7 +361,7 @@ MonoBehaviour:
   DCZoomTargetOut: 10
   DCZoomSpeed: 0.5
   edgeBoundary: 20
-  edgeSpeed: 1
+  edgeSpeed: 0
   keyboardInput: 1
   inverseKeyboard: 0
   touchEnabled: 0
@@ -369,7 +370,7 @@ MonoBehaviour:
   linkedZoomDrag: 1
   maxZoom: 70
   minZoom: 5
-  zoomStepSize: 5
+  zoomStepSize: 1
   zoomToMouse: 1
   followTarget: {fileID: 0}
   lerpSpeed: 0.5
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 502968188}
   tilemap: {fileID: 1803214911}
+  considerClickDelta: 5
 --- !u!4 &1828995018
 Transform:
   m_ObjectHideFlags: 0
