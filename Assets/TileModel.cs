@@ -5,8 +5,9 @@ public class TileModel : ScriptableObject
 {
     [HideInInspector] public Vector2Int position;
 
-    public bool canBurn;
+    public bool _generallyBurnable;
     public float burnTime;
+    public float recoveryTime;
 
     [SerializeField] private TileState state = TileState.Healthy;
     public TileState getState() { return this.state; }
@@ -25,6 +26,11 @@ public class TileModel : ScriptableObject
     public bool ShouldSpread(float timeDelta)
     {
         return (spreadChancePerSecond * timeDelta) > Random.Range(0f, 1f);
+    }
+
+    public bool IsBurnable()
+    {
+        return _generallyBurnable && state != TileState.Dead;
     }
 
 }
