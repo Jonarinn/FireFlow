@@ -66,6 +66,11 @@ public class FireManager : MonoBehaviour
         if (tile.ShouldSpread(Time.deltaTime))
         {
             controller.SpreadFireTo(tile.position + delta);
+            if (tile.position == new Vector2Int(GridRenderer.housePosition.x, GridRenderer.housePosition.y))
+            {
+                GameController.EndGame();
+            }
+
         }
     }
 
