@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390c2d31acb8fa84c96f35691d62251f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 150, y: 100}
+  size: {x: 40, y: 40}
   healthyTile: {fileID: 11400000, guid: 34825899836e08f489ee9263ae5698bb, type: 2}
 --- !u!4 &502968187
 Transform:
@@ -280,7 +279,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9528302, g: 0.679457, b: 0.3460751, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -330,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 55, z: -10}
+  m_LocalPosition: {x: 20, y: 20, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,9 +382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 502968188}
-  sprites_Healthy: {fileID: 11400000, guid: 19ac7dc799da10944aa37fcd4997531d, type: 2}
-  sprites_Burning: {fileID: 11400000, guid: a445a079a78da024bbdc9e852332820b, type: 2}
-  sprites_Dead: {fileID: 11400000, guid: 5f25859c10b02ee4a932eb6be5853981, type: 2}
+  sprites_Healthy: {fileID: 11400000, guid: 98fbff554924dfd46a5412bddfaf1dc0, type: 2}
+  sprites_Burning: {fileID: 11400000, guid: 36bd5b51f4ed30646b49d22f5b4f143f, type: 2}
+  sprites_Dead: {fileID: 11400000, guid: bd05120a5a89ee744883772074cac844, type: 2}
   tilemap: {fileID: 0}
 --- !u!483693784 &1803214910
 TilemapRenderer:
