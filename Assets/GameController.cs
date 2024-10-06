@@ -1,16 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class GameController : MonoBehaviour
 {
 
     public GameModel model;
     public FireManager fireManager;
-
-    // public UnityEngine.UI.Text gameOverText;
-    // public Sprite squareSprite;
-
 
     // Start is called before the first frame update
     void Start()
