@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -476,6 +475,7 @@ MonoBehaviour:
   sprites_Burning: {fileID: 11400000, guid: 36bd5b51f4ed30646b49d22f5b4f143f, type: 2}
   sprites_Dead: {fileID: 11400000, guid: bd05120a5a89ee744883772074cac844, type: 2}
   sprites_Jungle: {fileID: 11400000, guid: 9584f992ff89f47dc8e12bf23394b0ac, type: 2}
+  sprites_House: {fileID: 11400000, guid: bf9fb37190c537846b99b28232b79978, type: 2}
   tilemap: {fileID: 0}
 --- !u!483693784 &1803214910
 TilemapRenderer:
