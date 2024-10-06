@@ -18,6 +18,11 @@ public class GameController : MonoBehaviour
 
     }
 
+    public static void EndGame()
+    {
+        StopGame.StopGameSimulation();
+    }
+
     public TileModel[,] GetAllTiles() { return model.GetTiles(); }
 
     public void OnTileClicked(Vector2Int tilePos) { SpreadFireTo(tilePos); }
