@@ -13,6 +13,7 @@ public class FireManager : MonoBehaviour
     [SerializeField] TileQueue deathQueue = new();
     [SerializeField] TileQueue recoveryQueue = new();
 
+
     public void SetBurning(TileModel tile, bool burning)
     {
         if (burning) TileIsBurning(tile);
