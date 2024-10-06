@@ -5,6 +5,7 @@ public class TileModel : ScriptableObject
 {
     [HideInInspector] public Vector2Int position;
 
+    public TreeType treeType = TreeType.Normal;
     public bool _generallyBurnable;
     public float burnTime;
     public float recoveryTime;
@@ -12,6 +13,7 @@ public class TileModel : ScriptableObject
     [SerializeField] private TileState state = TileState.Healthy;
     public TileState getState() { return this.state; }
     public void SetState(TileState newState) { this.state = newState; }
+
 
     public void MoveToNextState()
     {
@@ -33,12 +35,36 @@ public class TileModel : ScriptableObject
         return _generallyBurnable && state != TileState.Dead;
     }
 
-}
+    public void changeTreeType(TreeType newTreeType)
+    {
+        treeType = newTreeType;
+        switch (newTreeType)
+        {
+            case TreeType.Normal:
+                burnTime = 1;
+                recoveryTime = 1;
+                spreadChancePerSecond = 0.4f;
+                break;
+            case TreeType.Jungle:
+                burnTime = 5;
+                recoveryTime = 5;
+                spreadChancePerSecond = 0.3f;
+                break;
+        }
 
+    }
+
+}
 
 public enum TileState
 {
     Healthy,
     Burning,
-    Dead
+    Dead,
+}
+
+public enum TreeType
+{
+    Normal,
+    Jungle
 }
