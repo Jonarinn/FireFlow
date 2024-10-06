@@ -18,6 +18,8 @@ public class GridRenderer : MonoBehaviour
 
     [SerializeField] private Tilemap tilemap;
 
+    public static TreeGamemode treeGamemode = TreeGamemode.Normal;
+
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class GridRenderer : MonoBehaviour
                 if (x == housePosition.x && y == housePosition.y) continue;
                 TileModel tile = tiles[x, y];
 
+                tile.tileType = (TileType)treeGamemode;
+
                 switch (tile.tileType)
                 {
                     case TileType.Normal:
@@ -64,6 +68,10 @@ public class GridRenderer : MonoBehaviour
         }
     }
 
+    public static void ChangeGamemode(TreeGamemode newGamemode)
+    {
+        treeGamemode = newGamemode;
+    }
     private void RenderHouse(int x, int y)
     {
         TileModel house = new TileModel();
@@ -88,4 +96,10 @@ public class GridRenderer : MonoBehaviour
             default: return null;
         }
     }
+}
+
+public enum TreeGamemode
+{
+    Normal,
+    Jungle,
 }
