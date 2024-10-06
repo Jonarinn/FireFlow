@@ -1,4 +1,5 @@
 using System.Threading;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,6 +13,7 @@ public class GridRenderer : MonoBehaviour
     public Tile sprites_Dead;
     public Tile sprites_Jungle;
     public Tile sprites_House;
+    public Vector2Int gridSize = new(40, 40);
 
     public static Vector3Int housePosition;
 
@@ -23,7 +25,7 @@ public class GridRenderer : MonoBehaviour
 
     void Start()
     {
-        housePosition = new(Random.Range(0, 40), Random.Range(0, 40));
+        housePosition = new(Random.Range(0, gridSize[0]), Random.Range(0, gridSize[1]));
         tilemap = GetComponent<Tilemap>();
         if (tilemap == null) throw new System.Exception("Could not find Tilemap component on this gameobject");
         RenderHouse(housePosition.x, housePosition.y);
@@ -51,14 +53,14 @@ public class GridRenderer : MonoBehaviour
                 {
                     case TileType.Normal:
                         {
-                            tile.burnTime = 3;
-                            tile.recoveryTime = 3;
+                            tile.burnTime = 4;
+                            tile.recoveryTime = 7;
                             tile.spreadChancePerSecond = 0.3f;
                             break;
                         }
                     case TileType.Jungle:
-                        tile.burnTime = 5;
-                        tile.recoveryTime = 9;
+                        tile.burnTime = 7;
+                        tile.recoveryTime = 12;
                         tile.spreadChancePerSecond = 0.2f;
                         break;
                 }
@@ -72,11 +74,13 @@ public class GridRenderer : MonoBehaviour
     {
         treeGamemode = newGamemode;
     }
+
+
     private void RenderHouse(int x, int y)
     {
+
         TileModel house = new TileModel();
         house.tileType = TileType.House;
-        Debug.Log("House at " + x + ", " + y);
         tilemap.SetTile(new(x, y), ChooseTileForState(house));
     }
 

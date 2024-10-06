@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -548,12 +549,19 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 307555516}
-  - component: {fileID: 307555518}
-  - component: {fileID: 307555517}
-  m_Layer: 5
-  m_Name: Fill
-  m_TagString: Untagged
+
+  - component: {fileID: 519420032}
+  - component: {fileID: 519420031}
+  - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
+  - component: {fileID: 519420037}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2943,9 +2951,25 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207630045}
-  m_CullTransparentMesh: 1
---- !u!1 &1319536695
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdb52c9984e24503bc3a800a7062216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &519420037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1912495e57e442bb63270cebf555b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &707704712
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4124,6 +4148,7 @@ MonoBehaviour:
   sprites_Dead: {fileID: 11400000, guid: bd05120a5a89ee744883772074cac844, type: 2}
   sprites_Jungle: {fileID: 11400000, guid: 9584f992ff89f47dc8e12bf23394b0ac, type: 2}
   sprites_House: {fileID: 11400000, guid: bf9fb37190c537846b99b28232b79978, type: 2}
+  gridSize: {x: 40, y: 40}
   tilemap: {fileID: 0}
 --- !u!483693784 &1803214910
 TilemapRenderer:
