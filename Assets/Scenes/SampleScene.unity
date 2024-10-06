@@ -1323,6 +1323,7 @@ MonoBehaviour:
   sprites_Healthy: {fileID: 11400000, guid: 98fbff554924dfd46a5412bddfaf1dc0, type: 2}
   sprites_Burning: {fileID: 11400000, guid: 36bd5b51f4ed30646b49d22f5b4f143f, type: 2}
   sprites_Dead: {fileID: 11400000, guid: bd05120a5a89ee744883772074cac844, type: 2}
+  sprites_Jungle: {fileID: 0}
   tilemap: {fileID: 0}
 --- !u!483693784 &1803214910
 TilemapRenderer:
