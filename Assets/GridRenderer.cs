@@ -11,6 +11,7 @@ public class GridRenderer : MonoBehaviour
     public Tile sprites_Burning;
     public Tile sprites_Dead;
     public Tile sprites_Jungle;
+    public Tile sprites_House;
 
     public static Vector3Int housePosition;
 
@@ -79,7 +80,7 @@ public class GridRenderer : MonoBehaviour
                 {
                     if (tile.tileType == TileType.Normal) return sprites_Healthy;
                     else if (tile.tileType == TileType.Jungle) return sprites_Jungle;
-                    else if (tile.tileType == TileType.House) return sprites_Burning;
+                    else if (tile.tileType == TileType.House) return sprites_House;
                     else return null;
                 }
             case TileState.Burning: return sprites_Burning;

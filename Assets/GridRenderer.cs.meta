@@ -9,7 +9,8 @@ MonoImporter:
   - sprites_Burning: {fileID: 11400000, guid: 36bd5b51f4ed30646b49d22f5b4f143f, type: 2}
   - sprites_Dead: {fileID: 11400000, guid: bd05120a5a89ee744883772074cac844, type: 2}
   - sprites_Jungle: {fileID: 11400000, guid: 9584f992ff89f47dc8e12bf23394b0ac, type: 2}
-  - tilemap: {instanceID: 0}
+  - sprites_House: {fileID: 11400000, guid: bf9fb37190c537846b99b28232b79978, type: 2}
+  - tilemap: {fileID: 3231723176045758175, guid: c35491c2f5ea1dd4a87866bc75e7fd19, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
