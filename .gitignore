@@ -15,4 +15,4 @@
 *.csproj
 *.sln
 UserSettings/
-.vsconfig
+.vsconfig.DS_Store
